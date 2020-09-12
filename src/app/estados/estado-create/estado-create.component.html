@@ -1,0 +1,52 @@
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form
+    (submit)="onSaveEstado(estadoForm)"
+    #estadoForm="ngForm"
+    *ngIf="!isLoading"
+  >
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="nome"
+        pattern="[A-Za-zÀ-ÿd ]+"
+        [ngModel]="estado?.nome"
+        required
+        placeholder="Nome Estado"
+        #nome="ngModel"
+      />
+      <mat-error *ngIf="nome.invalid"
+        >Por favor entre o nome do estado.</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="abreviacao"
+        pattern="[A-Za-z]{2}"
+        [ngModel]="estado?.abreviacao"
+        required
+        placeholder="Abreviação do Estado"
+        #abreviacao="ngModel"
+      />
+      <mat-error *ngIf="abreviacao.invalid"
+        >Por favor entre com a abreviação do estado.</mat-error
+      >
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit">
+      Salvar Estado
+    </button>
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      routerLink=""
+      routerLinkActive="mat-accent"
+      style="float: right"
+    >
+      Cancelar
+    </button>
+  </form>
+</mat-card>

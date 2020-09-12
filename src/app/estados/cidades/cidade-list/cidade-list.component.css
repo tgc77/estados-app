@@ -1,0 +1,19 @@
+.example-card {
+  /* float: right; */
+  /* top: 20px; */
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 13px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}

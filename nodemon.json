@@ -1,0 +1,5 @@
+{
+  "env": {
+    "MONGODB_CONNECTON": "mongodb://tester:tester123@ds155737.mlab.com:55737/zooxsmart-test"
+  }
+}

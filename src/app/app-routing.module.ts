@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { EstadoListComponent } from './estados/estado-list/estado-list.component';
+import { EstadoCreateComponent } from './estados/estado-create/estado-create.component';
+
+const routes: Routes = [
+  { path: '', component: EstadoListComponent },
+  { path: 'create', component: EstadoCreateComponent },
+  { path: 'edit/:estadoId', component: EstadoCreateComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
