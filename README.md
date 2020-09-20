@@ -9,3 +9,5 @@ Para iniciar o app abra um terminal e execute: './initialize.sh' para instalar a
 ## Visualizar o App hospedado no Heroku
 
 Para ver o app sem precisar instalar e executar nada acesse o link: https://estados-app.herokuapp.com/
+
+![Estados App](https://github.com/tgc77/estados-app/blob/master/Screen%20Shot%202020-09-12%20at%2014.41.35%201.png)
